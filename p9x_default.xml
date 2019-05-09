@@ -19,6 +19,11 @@
            fetch="https://github.com/DirtyUnicorns/"
            review="gerrit.dirtyunicorns.com" />
 
+ <!-- Michele remote -->
+  <remote  name="michele"
+           revision="p9x"
+           fetch="https://github.com/bertozzi243/" />
+
   <!-- DU REPOS -->
 
   <!-- General -->
@@ -38,7 +43,7 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <project path="manifest" name="android_manifest" remote="du" revision="p9x-caf" />
+  <project path="manifest" name="android_manifest" remote="michele" revision="p9x-caf" />
 
   <!-- Device -->
   <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="du" revision="p9x-caf" />
@@ -58,7 +63,7 @@
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="android_frameworks_av" remote="du" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="du" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="michele" />
   <project path="frameworks/compile/mclinker" name="android_frameworks_compile_mclinker" remote="du" />
   <project path="frameworks/native" name="android_frameworks_native" remote="du" />
   <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="du" revision="p9x-caf" />
@@ -71,22 +76,16 @@
   <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="du" revision="p9x-caf" />
   <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" remote="du" revision="p9x-caf" />
-  <project path="hardware/qcom/audio-caf/msm8960" name="android_hardware_qcom_audio" remote="du" revision="p9x-caf-8960" />
   <project path="hardware/qcom/audio-caf/msm8996" name="android_hardware_qcom_audio" remote="du" revision="p9x-caf-8996" />
-  <project path="hardware/qcom/audio-caf/msm8998" name="android_hardware_qcom_audio" remote="du" revision="p9x-caf-8998" />
   <project path="hardware/qcom/bootctrl" name="android_hardware_qcom_bootctrl" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="du" revision="p9x-caf" />
-  <project path="hardware/qcom/display-caf/msm8960" name="android_hardware_qcom_display" remote="du" revision="p9x-caf-8960" />
   <project path="hardware/qcom/display-caf/msm8996" name="android_hardware_qcom_display" remote="du" revision="p9x-caf-8996" />
-  <project path="hardware/qcom/display-caf/msm8998" name="android_hardware_qcom_display" remote="du" revision="p9x-caf-8998" />
   <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/keymaster" name="android_hardware_qcom_keymaster" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="du" revision="p9x-caf" />
-  <project path="hardware/qcom/media-caf/msm8960" name="android_hardware_qcom_media" remote="du" revision="p9x-caf-8960" />
   <project path="hardware/qcom/media-caf/msm8996" name="android_hardware_qcom_media" remote="du" revision="p9x-caf-8996" />
-  <project path="hardware/qcom/media-caf/msm8998" name="android_hardware_qcom_media" remote="du" revision="p9x-caf-8998" />
   <project path="hardware/qcom/power" name="android_hardware_qcom_power" remote="du" revision="p9x-caf" />
   <project path="hardware/ril" name="android_hardware_ril" remote="du" />
   <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="du" revision="p9x-caf" />
@@ -96,13 +95,13 @@
   <project path="packages/apps/Changelog" name="android_packages_apps_Changelog" remote="du" />
   <project path="packages/apps/CustomDoze" name="android_packages_apps_CustomDoze" remote="du" />
   <project path="packages/apps/DocumentsUI" name="android_packages_apps_DocumentsUI" remote="du" />
-  <project path="packages/apps/DU-Tweaks" name="android_packages_apps_DU-Tweaks" remote="du" />
+  <project path="packages/apps/DU-Tweaks" name="android_packages_apps_DU-Tweaks" remote="michele" />
   <project path="packages/apps/DU-Updater" name="android_packages_apps_DU-Updater" remote="du" />
   <project path="packages/apps/EmergencyInfo" name="android_packages_apps_EmergencyInfo" remote="du" />
   <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="du" />
   <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="du" />
   <project path="packages/apps/PackageInstaller" name="android_packages_apps_PackageInstaller" remote="du" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="du" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="michele" />
   <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="du" />
   <project path="packages/apps/WeatherClient" name="android_packages_apps_WeatherClient" remote="du" />
   <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="du" />
@@ -121,7 +120,7 @@
   <project path="prebuilts/clang/host/linux-x86" name="DirtyUnicorns/android_prebuilts_clang_host_linux-x86" remote="gitlab" revision="p9x" />
 
   <!-- Vendor -->
-  <project path="vendor/du" name="android_vendor_du" remote="du" >
+  <project path="vendor/du" name="android_vendor_du" remote="michele" >
     <linkfile src="scripts/merge-aosp.sh" dest="merge-aosp.sh" />
   </project>
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="du" />
@@ -139,6 +138,6 @@
   <project path="vendor/qcom/opensource/interfaces" name="android_vendor_qcom_opensource_interfaces" remote="du" revision="p9x-caf" />
   <project path="vendor/qcom/opensource/time-services" name="android_vendor_qcom_opensource_time-services" remote="du" revision="p9x-caf" />
   <project path="vendor/support" name="android_vendor_support" remote="du" />
-  <project path="vendor/themes" name="android_vendor_themes" remote="du" />
+  <project path="vendor/themes" name="android_vendor_themes" remote="michele" />
 
 </manifest>
